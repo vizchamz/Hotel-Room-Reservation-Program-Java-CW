@@ -79,6 +79,7 @@ public class HotelExtended {
     }
 
     public static void initialise(Room hotelRef[], Room customerSurname[]) {
+        PersonExtended personExtended = new PersonExtended("e", "e", 0);
         for (int x = 0; x < 8; x++) {
             hotelRef[x] = new Room("e");
             customerSurname[x] = new Room("e");

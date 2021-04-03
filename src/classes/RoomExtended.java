@@ -1,15 +1,15 @@
 package classes;
 
 public class RoomExtended {
-    String roomName;
-    PersonExtended personExtended = new PersonExtended("e", "e", 0);
+    private int numberOfGuests;
+    private PersonExtended personExtended;
 
-    public String getRoomName() {
-        return roomName;
+    public int getNumberOfGuests() {
+        return numberOfGuests;
     }
 
-    public void setRoomName(String roomName) {
-        this.roomName = roomName;
+    public void setNumberOfGuests(int numberOfGuests) {
+        this.numberOfGuests = numberOfGuests;
     }
 
     public PersonExtended getPersonExtended() {
@@ -20,8 +20,8 @@ public class RoomExtended {
         this.personExtended = personExtended;
     }
 
-    public RoomExtended(String roomName, PersonExtended personExtended) {
-        this.roomName = roomName;
+    public RoomExtended(int numberOfGuests, PersonExtended personExtended) {
+        this.numberOfGuests = numberOfGuests;
         this.personExtended = personExtended;
     }
 }

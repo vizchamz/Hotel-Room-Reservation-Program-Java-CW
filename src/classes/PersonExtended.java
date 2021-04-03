@@ -1,9 +1,9 @@
 package classes;
 
 public class PersonExtended {
-    String firstName;
-    String surName;
-    long cardNo;
+    private String firstName;
+    private String surName;
+    private long cardNo;
 
     public String getFirstName() {
         return firstName;
