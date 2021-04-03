@@ -1,21 +1,21 @@
-package classes;
+package arrays;
 
 import java.io.*;
 import java.util.*;
 
-public class Hotel {
+public class HotelExampleExtended {
     public static void main(String[] args) {
         String roomName = "";
         int roomNum = 0;
         String menu;
-        Room[] hotel = new Room[8];
+        String[] hotel = new String[8];
         Scanner input = new Scanner(System.in);
 
         for (int x = 0; x < 8; x++) {
-            hotel[x] = new Room("e");
+            hotel[x] = "e";
         }
 
-        System.out.println("Classes Version");
+        System.out.println("Arrays Version");
 
         while (true) {
             extras();
@@ -85,7 +85,7 @@ public class Hotel {
         System.out.println("\n");
     }
 
-    public static void addCustomers(Room hotelRef[]) {
+    public static void addCustomers(String hotelRef[]) {
         Scanner input = new Scanner(System.in);
         int roomNumber = 0;
 
@@ -98,7 +98,7 @@ public class Hotel {
                     System.out.println("Enter name for room " + roomNumber + " :");
                     String roomCustomerName = input.next().toLowerCase();
 
-                    hotelRef[roomNumber].setRoomName(roomCustomerName);
+                    hotelRef[roomNumber] = roomCustomerName;
                     System.out.println("\n");
                     System.out.println("Adding Customer to Room Number " + roomNumber + " Successful");
                 }
@@ -126,34 +126,34 @@ public class Hotel {
         }
     }
 
-    public static void emptyRooms(Room hotelRef[]) {
+    public static void emptyRooms(String hotelRef[]) {
         System.out.println("\n");
         System.out.println("Empty Rooms");
 
         for (int x = 0; x < 8; x++) {
-            if (hotelRef[x].getRoomName().equals("e")) {
+            if (hotelRef[x].equals("e")) {
                 System.out.println("room " + x + " is Empty");
             }
         }
     }
 
-    public static void viewRooms(Room hotelRef[]) {
+    public static void viewRooms(String hotelRef[]) {
         System.out.println("\n");
         System.out.println("All Rooms");
 
         for (int x = 0; x < 8; x++) {
-            System.out.println("room " + x + " occupied by " + hotelRef[x].getRoomName());
+            System.out.println("room " + x + " occupied by " + hotelRef[x]);
         }
     }
 
-    public static void sortCustomers(Room hotelRef[]) {
+    public static void sortCustomers(String hotelRef[]) {
         String guests[] = new String[hotelRef.length];
 
         System.out.println("\n");
         System.out.println("Sort Customers by Alphabetical Order");
 
         for (int i = 0; i < hotelRef.length; i++) {
-            guests[i] = hotelRef[i].getRoomName();
+            guests[i] = hotelRef[i];
         }
 
         for(int i = 0; i< guests.length-1; i++) {
@@ -189,7 +189,7 @@ public class Hotel {
         }*/
     }
 
-    public static void deleteCustomers(Room hotelRef[]) {
+    public static void deleteCustomers(String[] hotelRef) {
         Scanner input = new Scanner(System.in);
         int roomNumber = 0;
 
@@ -202,8 +202,8 @@ public class Hotel {
                     System.out.println("Enter name for room " + roomNumber + " to confirm the deletion:");
                     String roomCustomerName = input.next();
 
-                    if (roomCustomerName.equalsIgnoreCase(hotelRef[roomNumber].getRoomName())) {
-                        hotelRef[roomNumber].setRoomName("e");
+                    if (roomCustomerName.equalsIgnoreCase(hotelRef[roomNumber])) {
+                        hotelRef[roomNumber] = "e";
                         System.out.println("\n");
                         System.out.println("Deletion Customer from Room Number " + roomNumber + " Completed");
                     } else {
@@ -222,7 +222,7 @@ public class Hotel {
         }
     }
 
-    public static void findCustomers(Room hotelRef[]) {
+    public static void findCustomers(String[] hotelRef) {
         Scanner input = new Scanner(System.in);
         int index;
 
@@ -232,7 +232,7 @@ public class Hotel {
 
             if (!(roomCustomerName.equalsIgnoreCase("stop"))) {
                 for (index = 0; index < hotelRef.length; index++) {
-                    if (hotelRef[index].getRoomName().equals(roomCustomerName)) {
+                    if (hotelRef[index].equals(roomCustomerName)) {
                         System.out.println(roomCustomerName + " has occupied Room Number " + index);
                     }
                     /*else {
@@ -247,11 +247,11 @@ public class Hotel {
         }
     }
 
-    public static void storeFile(Room hotelRef[]) {
+    public static void storeFile(String hotelRef[]) {
         try {
             FileWriter myWriter = new FileWriter("Hotel-Room-Reservation-Program-Java-CW/src/filename.txt");
             for (int x = 0; x < 8; x++) {
-                myWriter.write( x + "-" + hotelRef[x].getRoomName() + "\n");
+                myWriter.write( x + "-" + hotelRef[x] + "\n");
             }
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -261,7 +261,7 @@ public class Hotel {
         }
     }
 
-    public static void loadFile(Room hotelRef[]) {
+    public static void loadFile(String hotelRef[]) {
         try {
             File myObject = new File("Hotel-Room-Reservation-Program-Java-CW/src/filename.txt");
             Scanner myReader = new Scanner(myObject);
@@ -278,7 +278,7 @@ public class Hotel {
                     stringValues[i] = Integer.parseInt(values[i+2]);
                 }*/
                 for (int i=0; i < (values.length/2); i+=2) {
-                    hotelRef[Integer.parseInt(values[i])].setRoomName(values[i+1]);
+                    hotelRef[Integer.parseInt(values[i])] = values[i+1];
                     //System.out.println(str);
                 }
                 //System.out.println(data);
@@ -291,4 +291,3 @@ public class Hotel {
         }
     }
 }
-
