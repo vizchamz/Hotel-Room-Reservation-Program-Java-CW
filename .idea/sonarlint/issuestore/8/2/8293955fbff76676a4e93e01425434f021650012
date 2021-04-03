@@ -1,0 +1,35 @@
+
+Z
+java:S1197k"8Move the array designator from the variable to the type.(ËÛÄÇýÿÿÿÿ8Å¡®”‰/
+=	java:S131""Add a default case to this switch.(€ä¿;8†ƒèðˆ/
+Y	java:S125Š"<This block of commented-out lines of code should be removed.(¢ý—Æ8È§Ú•‰/
+k
+java:S1226¢"MIntroduce a new variable instead of reusing the parameter "roomCustomerName".(ŸˆÃÆ8§’Ñùˆ/
+[
+java:S1197"8Move the array designator from the variable to the type.(—û•¼üÿÿÿÿ8›ç­ùˆ/
+f
+java:S2095­"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(úÚñç8ôßà‰/
+Z
+java:S1197I"8Move the array designator from the variable to the type.(ÜŠº˜ýÿÿÿÿ8µÉÒøˆ/
+…
+java:S4970Ç"bRemove or refactor this catch clause because it is unreachable as hidden by previous catch blocks.(©œ¡ÿÿÿÿÿ8Ð¯Ô“‰/
+V
+java:S1197"8Move the array designator from the variable to the type.(¡ñ¹—8åÆÌùˆ/
+i
+java:S1226M"GIntroduce a new variable instead of reusing the parameter "roomNumber".(›ÔÜòÿÿÿÿÿ8µÉÒøˆ/
+Z
+java:S1197b"8Move the array designator from the variable to the type.(ÝÏû€üÿÿÿÿ8ü•¸‰/
+k
+java:S1226–"MIntroduce a new variable instead of reusing the parameter "roomCustomerName".(ŸˆÃÆ8›ç­ùˆ/
+v
+java:S3012r"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(´ýÒ’8ÚÚ–‰/
+j
+java:S1226P"MIntroduce a new variable instead of reusing the parameter "roomCustomerName".(ŸˆÃÆ8µÉÒøˆ/
+Z
+java:S1197l"8Move the array designator from the variable to the type.(¾žöþÿÿÿÿ8”ð•‰/
+[
+java:S1197«"8Move the array designator from the variable to the type.(úø¬êÿÿÿÿÿ8ñî¨‰/
+j
+java:S1226“"GIntroduce a new variable instead of reusing the parameter "roomNumber".(›ÔÜòÿÿÿÿÿ8›ç­ùˆ/
+Z
+java:S1197W"8Move the array designator from the variable to the type.(ÁÍÖöùÿÿÿÿ8µÉÒøˆ/
