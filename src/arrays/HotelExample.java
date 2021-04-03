@@ -11,9 +11,7 @@ public class HotelExample {
         String[] hotel = new String[8];
         Scanner input = new Scanner(System.in);
 
-        for (int x = 0; x < 8; x++) {
-            hotel[x] = "e";
-        }
+        initialise(hotel);
 
         System.out.println("Arrays Version");
 
@@ -74,6 +72,12 @@ public class HotelExample {
                     System.out.println("Please Enter Valid Option");
                     break;
             }
+        }
+    }
+
+    public static void initialise(String hotelRef[]) {
+        for (int x = 0; x < 8; x++) {
+            hotelRef[x] = "e";
         }
     }
 

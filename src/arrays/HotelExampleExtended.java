@@ -14,10 +14,7 @@ public class HotelExampleExtended {
         long[] cardNo = new long[8];
         Scanner input = new Scanner(System.in);
 
-        for (int x = 0; x < 8; x++) {
-            hotel[x] = "e";
-            customerLastName[x] = "e";
-        }
+        initialise(hotel, customerLastName);
 
         System.out.println("Arrays Version");
 
@@ -78,6 +75,13 @@ public class HotelExampleExtended {
                     System.out.println("Please Enter Valid Option");
                     break;
             }
+        }
+    }
+
+    public static void initialise(String hotelRef[], String customerSurname[]) {
+        for (int x = 0; x < 8; x++) {
+            hotelRef[x] = "e";
+            customerSurname[x] = "e";
         }
     }
 
