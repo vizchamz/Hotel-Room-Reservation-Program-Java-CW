@@ -1,9 +1,8 @@
-
-e
-viz
-e
-e
-e
-e
-e
-e
+0-e
+1-viz
+2-chamz
+3-dharme
+4-sarukkali
+5-e
+6-e
+7-e
