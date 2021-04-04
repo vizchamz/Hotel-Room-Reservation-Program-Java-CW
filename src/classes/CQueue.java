@@ -1,9 +1,9 @@
 package classes;
 
 public class CQueue {
-    int SIZE = 5;
+    int size = 5;
     int front, rear;
-    Room items[] = new Room[SIZE];
+    Room items[] = new Room[size];
 
     CQueue() {
         front = -1;
@@ -11,7 +11,7 @@ public class CQueue {
     }
 
     boolean isFull() {
-        if (front == 0 && rear == SIZE - 1) {
+        if (front == 0 && rear == size - 1) {
             return true;
         }
         if (front == rear + 1) {
@@ -33,9 +33,9 @@ public class CQueue {
         } else {
             if (front == -1)
                 front = 0;
-            rear = (rear + 1) % SIZE;
+            rear = (rear + 1) % size;
             items[rear] = element;
-            System.out.println("Inserted " + element);
+            System.out.println("Inserted ");
         }
     }
 
@@ -51,7 +51,7 @@ public class CQueue {
                 rear = -1;
             }
             else {
-                front = (front + 1) % SIZE;
+                front = (front + 1) % size;
             }
             return (element);
         }

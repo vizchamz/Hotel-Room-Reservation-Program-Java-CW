@@ -120,7 +120,12 @@ public class Hotel {
                     }
                 }
                 else {
-                    list.enQueue(takeRoomDetails(roomNumber));
+                    if ((roomNumber >= 0 || roomNumber < 8) && roomNumber != 8) {
+                        list.enQueue(takeRoomDetails(roomNumber));
+                    }
+                    else {
+                        break;
+                    }
                 }
             }
             catch (InputMismatchException e){
@@ -234,6 +239,9 @@ public class Hotel {
                         hotelRef[roomNumber].setNumberOfGuests(0);
                         System.out.println("\n");
                         System.out.println("Deletion Customer from Room Number " + roomNumber + " Completed");
+                        if (!list.isEmpty()) {
+                            hotelRef[roomNumber] = list.deQueue();
+                        }
                     } else {
                         System.out.println("Customer Name Invalid");
                     }
@@ -283,7 +291,6 @@ public class Hotel {
             }
         } catch (IOException e) {
             System.out.println("An error occurred.");
-            e.printStackTrace();
         }
         try {
             FileWriter myWriter = new FileWriter("src/filename.txt");
@@ -294,7 +301,6 @@ public class Hotel {
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error Occurred.");
-            e.printStackTrace();
         }
     }
 
@@ -316,7 +322,6 @@ public class Hotel {
             System.out.println("Successfully Load the File.");
         } catch (FileNotFoundException e) {
             System.out.println("File not Found.");
-            e.printStackTrace();
         }
     }
 }
