@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public class Hotel {
+    static CQueue list = new CQueue();
+
     public static void main(String[] args) {
         String roomName = "";
         int roomNum = 0;
@@ -92,39 +94,55 @@ public class Hotel {
 
     public static void addCustomers(Room hotelRef[]) {
         while (true) {
+            boolean empty = false;
+            for (int i = 0; i < hotelRef.length; i++) {
+                if (hotelRef[i].getNumberOfGuests() == 0) {
+                    empty = true;
+                }
+            }
+
             Scanner input = new Scanner(System.in);
             int roomNumber = 0;
             try {
                 System.out.println("Enter room number (0-7) or 8 to Stop:");
                 roomNumber = input.nextInt();
 
-                if (roomNumber < 8) {
-                    System.out.println("Enter Payer's First Name for Room " + roomNumber + " :");
-                    String roomCustomerFirstName = input.next().toLowerCase();
-                    System.out.println("Enter Payer's Surname for Room " + roomNumber + " :");
-                    String roomCustomerSurname = input.next().toLowerCase();
-                    System.out.println("Enter Payer's Credit Card Number for Room " + roomNumber + " :");
-                    long roomCustomerCardNo = input.nextLong();
-                    System.out.println("Number of Guests in the Room for Room " + roomNumber + " :");
-                    int noOfGuests = input.nextInt();
+                if (empty) {
+                    if (roomNumber < 8) {
+                        hotelRef[roomNumber] = takeRoomDetails(roomNumber);
 
-                    Person person = new Person(roomCustomerFirstName, roomCustomerSurname, roomCustomerCardNo);
-                    Room room = new Room(noOfGuests, person);
-                    hotelRef[roomNumber] = room;
-
-                    System.out.println("\n");
-                    System.out.println("Adding Customer to Room Number " + roomNumber + " Successful");
+                        System.out.println("\n");
+                        System.out.println("Adding Customer to Room Number " + roomNumber + " Successful");
+                    } else if (roomNumber > 8) {
+                        System.out.println("Please Enter (0-7) to Add Customers");
+                    } else {
+                        break;
+                    }
                 }
-                else if (roomNumber > 8) {
-                    System.out.println("Please Enter (0-7) to Add Customers");
-                } else {
-                    break;
+                else {
+                    list.enQueue(takeRoomDetails(roomNumber));
                 }
             }
             catch (InputMismatchException e){
                 System.out.println("Please Enter Valid Room Number to Add Customers");
             }
         }
+    }
+
+    public static Room takeRoomDetails(int roomNumber) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter Payer's First Name for Room " + roomNumber + " :");
+        String roomCustomerFirstName = input.next().toLowerCase();
+        System.out.println("Enter Payer's Surname for Room " + roomNumber + " :");
+        String roomCustomerSurname = input.next().toLowerCase();
+        System.out.println("Enter Payer's Credit Card Number for Room " + roomNumber + " :");
+        long roomCustomerCardNo = input.nextLong();
+        System.out.println("Number of Guests in the Room for Room " + roomNumber + " :");
+        int noOfGuests = input.nextInt();
+
+        Person person = new Person(roomCustomerFirstName, roomCustomerSurname, roomCustomerCardNo);
+        return new Room(noOfGuests, person);
     }
 
     public static void emptyRooms(Room hotelRef[]) {
@@ -257,6 +275,17 @@ public class Hotel {
 
     public static void storeFile(Room hotelRef[]) {
         try {
+            File myObject = new File("src/filename.txt");
+            if (myObject.createNewFile()) {
+                System.out.println("File created: " + myObject.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        try {
             FileWriter myWriter = new FileWriter("src/filename.txt");
             for (int x = 0; x < 8; x++) {
                 myWriter.write( x + "-" + hotelRef[x].getPerson().getFirstName() + "-" + hotelRef[x].getPerson().getSurName() + "-" + hotelRef[x].getNumberOfGuests() + "-" + hotelRef[x].getPerson().getCardNo() + "\n");
@@ -273,16 +302,15 @@ public class Hotel {
         try {
             File myObject = new File("src/filename.txt");
             Scanner myReader = new Scanner(myObject);
+            int i=0;
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String values[] = data.split("-");
 
-                /*for (int i=0; i < (values.length/4); i+=5) {
-                    hotelRef[Integer.parseInt(values[i])].setPersonExtended().setFirstName(values[i+1]);
-                    customerSurname[Integer.parseInt(values[i])].setRoomName(values[i+2]);
-                    customersCount[Integer.parseInt(values[i])].setRoomName(String.valueOf(Integer.parseInt(values[i+3])));
-                    customerCardNo[Integer.parseInt(values[i])].setRoomName(String.valueOf(Long.parseLong(values[i+4])));
-                }*/
+                Person person = new Person(values[1], values[2], Long.parseLong(values[4]));
+                hotelRef[i].setNumberOfGuests(Integer.parseInt(values[3]));
+                hotelRef[i].setPerson(person);
+                i++;
             }
             myReader.close();
             System.out.println("Successfully Load the File.");

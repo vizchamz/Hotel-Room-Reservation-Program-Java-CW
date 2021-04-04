@@ -15,6 +15,7 @@ public class HotelExample {
         Scanner input = new Scanner(System.in);
 
         initialise(hotel, customerLastName);
+        initialise(customersPerRoom, cardNo);
 
         System.out.println("Arrays Version");
 
@@ -83,6 +84,14 @@ public class HotelExample {
             hotelRef[x] = "e";
             customerSurname[x] = "e";
         }
+    }
+
+    public static void initialise(int customersCount[], long customerCardNo[]) {
+        for (int x = 0; x < 8; x++) {
+            customersCount[x] = 0;
+            customerCardNo[x] = 0;
+        }
+        System.out.println("Initialised");
     }
 
     public static void extras() {
@@ -261,6 +270,17 @@ public class HotelExample {
 
     public static void storeFile(String hotelRef[], int customersCount[], String customerSurname[], long customerCardNo[]) {
         try {
+            File myObject = new File("src/filename.txt");
+            if (myObject.createNewFile()) {
+                System.out.println("File created: " + myObject.getName());
+            }
+            else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+        }
+        try {
             FileWriter myWriter = new FileWriter("src/filename.txt");
             for (int x = 0; x < 8; x++) {
                 myWriter.write( x + "-" + hotelRef[x] + "-" + customerSurname[x] + "-" + customersCount[x] + "-" + customerCardNo[x] + "\n");
@@ -269,7 +289,6 @@ public class HotelExample {
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error Occurred.");
-            e.printStackTrace();
         }
     }
 
@@ -281,18 +300,19 @@ public class HotelExample {
                 String data = myReader.nextLine();
                 String values[] = data.split("-");
 
-                for (int i=0; i < (values.length/4); i+=5) {
-                    hotelRef[Integer.parseInt(values[i])] = values[i+1];
-                    customerSurname[Integer.parseInt(values[i])] = values[i+2];
-                    customersCount[Integer.parseInt(values[i])] = Integer.parseInt(values[i+3]);
-                    customerCardNo[Integer.parseInt(values[i])] = Long.parseLong(values[i+4]);
+                int count=0;
+                for (int i=0; i < (values.length/5); i+=5) {
+                    hotelRef[Integer.parseInt(values[count])] = values[i+1];
+                    customerSurname[Integer.parseInt(values[count])] = values[i+2];
+                    customersCount[Integer.parseInt(values[count])] = Integer.parseInt(values[i+3]);
+                    customerCardNo[Integer.parseInt(values[count])] = Long.parseLong(values[i+4]);
+                    count++;
                 }
             }
             myReader.close();
             System.out.println("Successfully Load the File.");
         } catch (FileNotFoundException e) {
             System.out.println("File not Found.");
-            e.printStackTrace();
         }
     }
 }
