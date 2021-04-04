@@ -38,7 +38,7 @@ public class CQueue {
                 front = 0;
             rear = (rear + 1) % size;
             items[rear] = element;
-            System.out.println("Inserted ");
+            System.out.println("Inserted into a Queue");
         }
     }
 
