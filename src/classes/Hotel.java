@@ -13,6 +13,7 @@ public class Hotel {
         Room[] hotel = new Room[8];
         Scanner input = new Scanner(System.in);
 
+        //initialising
         initialise(hotel);
 
         System.out.println("Classes Version");
@@ -92,6 +93,7 @@ public class Hotel {
         System.out.println("\n");
     }
 
+    //adddCustomersMethod
     public static void addCustomers(Room hotelRef[]) {
         while (true) {
             boolean empty = false;
@@ -134,6 +136,7 @@ public class Hotel {
         }
     }
 
+    //promptingDetailsMethod
     public static Room takeRoomDetails(int roomNumber) {
         Scanner input = new Scanner(System.in);
 
@@ -150,6 +153,7 @@ public class Hotel {
         return new Room(noOfGuests, person);
     }
 
+    //emptyRoomsMethod
     public static void emptyRooms(Room hotelRef[]) {
         System.out.println("\n");
         System.out.println("Empty Rooms");
@@ -161,6 +165,7 @@ public class Hotel {
         }
     }
 
+    //viewRoomsMethod
     public static void viewRooms(Room hotelRef[]) {
         Scanner input = new Scanner(System.in);
         System.out.println("\n");
@@ -186,6 +191,7 @@ public class Hotel {
         }
     }
 
+    //viewRoomsAdditionalInfoMethod
     public static void viewInfoRooms(Room hotelRef[]) {
         System.out.println("\n");
         System.out.println("All Info about Rooms");
@@ -195,6 +201,7 @@ public class Hotel {
         }
     }
 
+    //sortCustomersMethod
     public static void sortCustomers(Room hotelRef[]) {
         String guests[] = new String[hotelRef.length];
 
@@ -220,6 +227,7 @@ public class Hotel {
         }
     }
 
+    //deleteCustomersMethod
     public static void deleteCustomers(Room hotelRef[]) {
         while (true) {
             Scanner input = new Scanner(System.in);
@@ -257,6 +265,7 @@ public class Hotel {
         }
     }
 
+    //findCustomersMethod
     public static void findCustomers(Room hotelRef[]) {
         while (true) {
             Scanner input = new Scanner(System.in);
@@ -281,6 +290,7 @@ public class Hotel {
         }
     }
 
+    //storeIntoTxt
     public static void storeFile(Room hotelRef[]) {
         try {
             File myObject = new File("src/filename.txt");
@@ -304,6 +314,7 @@ public class Hotel {
         }
     }
 
+    //readFromTxt
     public static void loadFile(Room hotelRef[]) {
         try {
             File myObject = new File("src/filename.txt");
@@ -325,3 +336,11 @@ public class Hotel {
         }
     }
 }
+
+/*
+ *
+ * References
+ *
+ * https://www.programiz.com/dsa/circular-queue
+ *
+ * */

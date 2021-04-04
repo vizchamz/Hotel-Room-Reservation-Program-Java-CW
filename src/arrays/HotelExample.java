@@ -14,6 +14,7 @@ public class HotelExample {
         long[] cardNo = new long[8];
         Scanner input = new Scanner(System.in);
 
+        //initialisingArrays
         initialise(hotel, customerLastName);
         initialise(customersPerRoom, cardNo);
 
@@ -102,6 +103,7 @@ public class HotelExample {
         System.out.println("\n");
     }
 
+    //addCustomersMethod
     public static void addCustomers(String hotelRef[], int customersCount[], String customerSurname[], long customerCardNo[]) {
         while (true) {
             Scanner input = new Scanner(System.in);
@@ -140,6 +142,7 @@ public class HotelExample {
         }
     }
 
+    //emptyRoomsMethod
     public static void emptyRooms(String hotelRef[]) {
         System.out.println("\n");
         System.out.println("Empty Rooms");
@@ -151,6 +154,7 @@ public class HotelExample {
         }
     }
 
+    //viewRoomsMethod
     public static void viewRooms(String hotelRef[], String customerSurname[], int customersCount[], long customerCardNo[]) {
         Scanner input = new Scanner(System.in);
         System.out.println("\n");
@@ -176,6 +180,7 @@ public class HotelExample {
         }
     }
 
+    //viewRoomsAdditionalDataMethod
     public static void viewInfoRooms(String hotelRef[], String customerSurname[], int customersCount[], long customerCardNo[]) {
         System.out.println("\n");
         System.out.println("All Info about Rooms");
@@ -185,6 +190,7 @@ public class HotelExample {
         }
     }
 
+    //sortCustomersMethod
     public static void sortCustomers(String hotelRef[]) {
         String guests[] = new String[hotelRef.length];
 
@@ -210,6 +216,7 @@ public class HotelExample {
         }
     }
 
+    //deleteCustomersMethod
     public static void deleteCustomers(String hotelRef[], String customerSurname[], int customersCount[], long customerCardNo[]) {
         while (true) {
             Scanner input = new Scanner(System.in);
@@ -244,6 +251,7 @@ public class HotelExample {
         }
     }
 
+    //findCustomersMethod
     public static void findCustomers(String hotelRef[]) {
         while (true) {
             Scanner input = new Scanner(System.in);
@@ -268,6 +276,7 @@ public class HotelExample {
         }
     }
 
+    //storeIntoTxt
     public static void storeFile(String hotelRef[], int customersCount[], String customerSurname[], long customerCardNo[]) {
         try {
             File myObject = new File("src/filename.txt");
@@ -292,6 +301,7 @@ public class HotelExample {
         }
     }
 
+    //readFromTxt
     public static void loadFile(String hotelRef[], int customersCount[], String customerSurname[], long customerCardNo[]) {
         try {
             File myObject = new File("src/filename.txt");
@@ -316,3 +326,16 @@ public class HotelExample {
         }
     }
 }
+
+
+/*
+ *
+ * References
+ * https://www.geeksforgeeks.org/array-copy-in-java/
+ * http://www.java2s.com/Code/Java/File-Input-Output/Readeachlineinacommaseparatedfileintoanarray.htm
+ * https://www.geeksforgeeks.org/system-exit-in-java/
+ * https://www.w3schools.com/java/java_files_create.asp
+ * https://www.w3schools.com/java/java_files_read.asp
+ * https://www.javatpoint.com/how-to-sort-string-array-in-java
+ *
+ * */

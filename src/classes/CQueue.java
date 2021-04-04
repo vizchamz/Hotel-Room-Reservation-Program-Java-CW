@@ -10,6 +10,7 @@ public class CQueue {
         rear = -1;
     }
 
+    //checkingIfTheQueueIsFull
     boolean isFull() {
         if (front == 0 && rear == size - 1) {
             return true;
@@ -20,6 +21,7 @@ public class CQueue {
         return false;
     }
 
+    //checkingIfTheQueueIsEmpty
     boolean isEmpty() {
         if (front == -1)
             return true;
@@ -27,6 +29,7 @@ public class CQueue {
             return false;
     }
 
+    //addingElement
     void enQueue(Room element) {
         if (isFull()) {
             System.out.println("Queue is full");
@@ -39,6 +42,7 @@ public class CQueue {
         }
     }
 
+    //removingElement
     Room deQueue() {
         Room element;
         if (isEmpty()) {
@@ -57,3 +61,10 @@ public class CQueue {
         }
     }
 }
+
+/*
+*
+* References
+* https://www.programiz.com/dsa/circular-queue
+*
+* */
