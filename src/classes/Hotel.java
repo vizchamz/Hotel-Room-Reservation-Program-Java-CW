@@ -16,6 +16,8 @@ public class Hotel {
         //initialising
         initialise(hotel);
 
+        System.out.println("Welcome to the Hotel Grand123");
+
         System.out.println("Classes Version");
 
         while (true) {
@@ -83,6 +85,7 @@ public class Hotel {
         for (int x = 0; x < 8; x++) {
             hotelRef[x] = new Room(0, person);
         }
+        System.out.println("Initialised");
     }
 
     public static void extras() {

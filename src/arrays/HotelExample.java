@@ -18,6 +18,8 @@ public class HotelExample {
         initialise(hotel, customerLastName);
         initialise(customersPerRoom, cardNo);
 
+        System.out.println("Welcome to the Hotel Grand123");
+
         System.out.println("Arrays Version");
 
         while (true) {
