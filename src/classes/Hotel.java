@@ -11,11 +11,9 @@ public class Hotel {
         Room[] hotel = new Room[8];
         Scanner input = new Scanner(System.in);
 
-        for (int x = 0; x < 8; x++) {
-            hotel[x] = new Room("e");
-        }
+        initialise(hotel);
 
-        System.out.println("Classes Version");
+        System.out.println("Arrays Version");
 
         while (true) {
             extras();
@@ -77,6 +75,13 @@ public class Hotel {
         }
     }
 
+    public static void initialise(Room hotelRef[]) {
+        Person person = new Person("e", "e", 0);
+        for (int x = 0; x < 8; x++) {
+            hotelRef[x] = new Room(0, person);
+        }
+    }
+
     public static void extras() {
         System.out.println("\n");
         for (int x = 0; x < 60; x++) {
@@ -86,42 +91,38 @@ public class Hotel {
     }
 
     public static void addCustomers(Room hotelRef[]) {
-        Scanner input = new Scanner(System.in);
-        int roomNumber = 0;
-
         while (true) {
+            Scanner input = new Scanner(System.in);
+            int roomNumber = 0;
             try {
                 System.out.println("Enter room number (0-7) or 8 to Stop:");
                 roomNumber = input.nextInt();
 
                 if (roomNumber < 8) {
-                    System.out.println("Enter name for room " + roomNumber + " :");
-                    String roomCustomerName = input.next().toLowerCase();
+                    System.out.println("Enter Payer's First Name for Room " + roomNumber + " :");
+                    String roomCustomerFirstName = input.next().toLowerCase();
+                    System.out.println("Enter Payer's Surname for Room " + roomNumber + " :");
+                    String roomCustomerSurname = input.next().toLowerCase();
+                    System.out.println("Enter Payer's Credit Card Number for Room " + roomNumber + " :");
+                    long roomCustomerCardNo = input.nextLong();
+                    System.out.println("Number of Guests in the Room for Room " + roomNumber + " :");
+                    int noOfGuests = input.nextInt();
 
-                    hotelRef[roomNumber].setRoomName(roomCustomerName);
+                    Person person = new Person(roomCustomerFirstName, roomCustomerSurname, roomCustomerCardNo);
+                    Room room = new Room(noOfGuests, person);
+                    hotelRef[roomNumber] = room;
+
                     System.out.println("\n");
                     System.out.println("Adding Customer to Room Number " + roomNumber + " Successful");
                 }
-            /*else if (roomNumber == 8) {
-                break;
-            }*/
                 else if (roomNumber > 8) {
                     System.out.println("Please Enter (0-7) to Add Customers");
                 } else {
                     break;
                 }
-            /*else {
-                try {
-                    System.out.println("Please Enter (0-7) to Add Customers");
-                }
-                catch (ArrayIndexOutOfBoundsException e) {
-                    e.printStackTrace();
-                }
-            }*/
             }
             catch (InputMismatchException e){
                 System.out.println("Please Enter Valid Room Number to Add Customers");
-                break;
             }
         }
     }
@@ -131,18 +132,43 @@ public class Hotel {
         System.out.println("Empty Rooms");
 
         for (int x = 0; x < 8; x++) {
-            if (hotelRef[x].getRoomName().equals("e")) {
+            if (hotelRef[x].getPersonExtended().getFirstName().equals("e")) {
                 System.out.println("room " + x + " is Empty");
             }
         }
     }
 
     public static void viewRooms(Room hotelRef[]) {
+        Scanner input = new Scanner(System.in);
         System.out.println("\n");
         System.out.println("All Rooms");
 
         for (int x = 0; x < 8; x++) {
-            System.out.println("room " + x + " occupied by " + hotelRef[x].getRoomName());
+            System.out.println("room " + x + " occupied by " + hotelRef[x].getPersonExtended().getFirstName() + " " + hotelRef[x].getPersonExtended().getSurName());
+        }
+
+        while (true) {
+            System.out.println("For Additional Information, Enter 'Add' or to Stop Enter 'X': ");
+            String prompt = input.next().toLowerCase();
+            if (prompt.equalsIgnoreCase("add")) {
+                viewInfoRooms(hotelRef);
+                break;
+            }
+            else if (prompt.equalsIgnoreCase("x")) {
+                break;
+            }
+            else {
+                System.out.println("Invalid Input, Please Enter Valid One");
+            }
+        }
+    }
+
+    public static void viewInfoRooms(Room hotelRef[]) {
+        System.out.println("\n");
+        System.out.println("All Info about Rooms");
+
+        for (int x = 0; x < 8; x++) {
+            System.out.println("room " + x + " occupied by " + hotelRef[x].getPersonExtended().getFirstName() + " " + hotelRef[x].getPersonExtended().getSurName() + " & there's " + hotelRef[x].getNumberOfGuests() + " Guests in the Room. " + "Credit Card Number is " + hotelRef[x].getPersonExtended().getCardNo());
         }
     }
 
@@ -153,7 +179,7 @@ public class Hotel {
         System.out.println("Sort Customers by Alphabetical Order");
 
         for (int i = 0; i < hotelRef.length; i++) {
-            guests[i] = hotelRef[i].getRoomName();
+            guests[i] = hotelRef[i].getPersonExtended().getFirstName();
         }
 
         for(int i = 0; i< guests.length-1; i++) {
@@ -166,44 +192,25 @@ public class Hotel {
             }
         }
 
-        /*for (int index = 0; index < guests.length; index++) {
-            if (hotelRef[index].equals(guests[index])) {
-                System.out.println(guests[index] + " has occupied Room Number " + index);
-            }
-        }*/
-
-        /*for (int index = 0; index < hotelRef.length; index++) {
-            for (int indexTwo = 0; indexTwo < guests.length; indexTwo++) {
-                if (hotelRef[index].equals(guests[index])) {
-                    System.out.println(guests[index] + " has occupied Room Number " + index);
-                }
-            }
-        }*/
-
         for (int x = 0; x < guests.length; x++) {
             System.out.println(guests[x]);
         }
-
-        /*for (int x = 0; x < 8; x++) {
-            System.out.println("room " + x + " occupied by " + hotelRef[x]);
-        }*/
     }
 
     public static void deleteCustomers(Room hotelRef[]) {
-        Scanner input = new Scanner(System.in);
-        int roomNumber = 0;
-
         while (true) {
+            Scanner input = new Scanner(System.in);
+            int roomNumber = 0;
             try {
                 System.out.println("Enter room number (0-7) to delete customer from Room or 8 to Stop:");
                 roomNumber = input.nextInt();
 
                 if (roomNumber < 8) {
-                    System.out.println("Enter name for room " + roomNumber + " to confirm the deletion:");
-                    String roomCustomerName = input.next();
+                    System.out.println("Enter First Name for room " + roomNumber + " to confirm the deletion:");
+                    String roomCustomerFirstName = input.next();
 
-                    if (roomCustomerName.equalsIgnoreCase(hotelRef[roomNumber].getRoomName())) {
-                        hotelRef[roomNumber].setRoomName("e");
+                    if (roomCustomerFirstName.equalsIgnoreCase(hotelRef[roomNumber].getPersonExtended().getFirstName())) {
+                        hotelRef[roomNumber].getPersonExtended().setFirstName("e");
                         System.out.println("\n");
                         System.out.println("Deletion Customer from Room Number " + roomNumber + " Completed");
                     } else {
@@ -217,28 +224,26 @@ public class Hotel {
             }
             catch (InputMismatchException e){
                 System.out.println("Please Enter Valid Room Number to Delete Customers");
-                break;
             }
         }
     }
 
     public static void findCustomers(Room hotelRef[]) {
-        Scanner input = new Scanner(System.in);
-        int index;
-
         while (true) {
-            System.out.println("Enter customer name to find room from customer name or 'Stop' to Stop the Search: ");
+            Scanner input = new Scanner(System.in);
+            int index;
+            System.out.println("Enter Customer's First Name to Find Room from Customer Name or 'Stop' to Stop the Search: ");
             String roomCustomerName = input.next().toLowerCase();
 
             if (!(roomCustomerName.equalsIgnoreCase("stop"))) {
                 for (index = 0; index < hotelRef.length; index++) {
-                    if (hotelRef[index].getRoomName().equals(roomCustomerName)) {
-                        System.out.println(roomCustomerName + " has occupied Room Number " + index);
-                    }
-                    /*else {
-                        System.out.println("Customer Name Invalid");
+                    if (hotelRef[index].getPersonExtended().equals(roomCustomerName)) {
+                        System.out.println(roomCustomerName + " has Occupied Room Number " + index);
                         break;
-                    }*/
+                    }
+                    else if (hotelRef.length-1 == index) {
+                        System.out.println("Customer Name Invalid");
+                    }
                 }
             }
             else {
@@ -251,7 +256,7 @@ public class Hotel {
         try {
             FileWriter myWriter = new FileWriter("src/filename.txt");
             for (int x = 0; x < 8; x++) {
-                myWriter.write( x + "-" + hotelRef[x].getRoomName() + "\n");
+                myWriter.write( x + "-" + hotelRef[x].getPersonExtended().getFirstName() + "-" + hotelRef[x].getPersonExtended().getSurName() + "-" + hotelRef[x].getNumberOfGuests() + "-" + hotelRef[x].getPersonExtended().getCardNo() + "\n");
             }
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -268,20 +273,13 @@ public class Hotel {
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String values[] = data.split("-");
-                /*int numValues[] = new int[values.length/2];
-                numValues[0] = Integer.parseInt(values[0]);
-                for (int i=1; i < (values.length/2); i++) {
-                    numValues[i] = Integer.parseInt(values[i+1]);
-                }
-                int stringValues[] = new int[values.length/2];
-                for (int i=1; i < (values.length/2); i++) {
-                    stringValues[i] = Integer.parseInt(values[i+2]);
+
+                /*for (int i=0; i < (values.length/4); i+=5) {
+                    hotelRef[Integer.parseInt(values[i])].setPersonExtended().setFirstName(values[i+1]);
+                    customerSurname[Integer.parseInt(values[i])].setRoomName(values[i+2]);
+                    customersCount[Integer.parseInt(values[i])].setRoomName(String.valueOf(Integer.parseInt(values[i+3])));
+                    customerCardNo[Integer.parseInt(values[i])].setRoomName(String.valueOf(Long.parseLong(values[i+4])));
                 }*/
-                for (int i=0; i < (values.length/2); i+=2) {
-                    hotelRef[Integer.parseInt(values[i])].setRoomName(values[i+1]);
-                    //System.out.println(str);
-                }
-                //System.out.println(data);
             }
             myReader.close();
             System.out.println("Successfully Load the File.");
@@ -291,4 +289,3 @@ public class Hotel {
         }
     }
 }
-

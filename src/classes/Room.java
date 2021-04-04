@@ -1,17 +1,28 @@
 package classes;
 
 public class Room {
-    private String roomName;
+    private int numberOfGuests;
+    private Person person;
 
-    public Room(String roomName) {
-        this.roomName = roomName;
+    public int getNumberOfGuests() {
+        return numberOfGuests;
     }
 
-    public String getRoomName() {
-        return roomName;
+    public void setNumberOfGuests(int numberOfGuests) {
+        this.numberOfGuests = numberOfGuests;
     }
 
-    public void setRoomName(String roomName) {
-        this.roomName = roomName;
+    public Person getPersonExtended() {
+        return person;
+    }
+
+    public void setPersonExtended(Person person) {
+        this.person = person;
+    }
+
+    public Room(int numberOfGuests, Person person) {
+        this.numberOfGuests = numberOfGuests;
+        this.person = person;
     }
 }
+

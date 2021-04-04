@@ -1,6 +1,6 @@
 package classes;
 
-public class PersonExtended {
+public class Person {
     private String firstName;
     private String surName;
     private long cardNo;
@@ -29,7 +29,7 @@ public class PersonExtended {
         this.cardNo = cardNo;
     }
 
-    public PersonExtended(String firstName, String surName, long cardNo) {
+    public Person(String firstName, String surName, long cardNo) {
         this.firstName = firstName;
         this.surName = surName;
         this.cardNo = cardNo;
