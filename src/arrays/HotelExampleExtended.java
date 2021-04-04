@@ -292,7 +292,7 @@ public class HotelExampleExtended {
 
     public static void storeFile(String hotelRef[], int customersCount[], String customerSurname[], long customerCardNo[]) {
         try {
-            FileWriter myWriter = new FileWriter("Hotel-Room-Reservation-Program-Java-CW/src/filename.txt");
+            FileWriter myWriter = new FileWriter("src/filename.txt");
             for (int x = 0; x < 8; x++) {
                 myWriter.write( x + "-" + hotelRef[x] + "-" + customerSurname[x] + "-" + customersCount[x] + "-" + customerCardNo[x] + "\n");
             }
@@ -306,7 +306,7 @@ public class HotelExampleExtended {
 
     public static void loadFile(String hotelRef[], int customersCount[], String customerSurname[], long customerCardNo[]) {
         try {
-            File myObject = new File("Hotel-Room-Reservation-Program-Java-CW/src/filename.txt");
+            File myObject = new File("src/filename.txt");
             Scanner myReader = new Scanner(myObject);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
