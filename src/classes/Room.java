@@ -4,6 +4,11 @@ public class Room {
     private int numberOfGuests;
     private Person person;
 
+    public Room(int numberOfGuests, Person person) {
+        this.numberOfGuests = numberOfGuests;
+        this.person = person;
+    }
+
     public int getNumberOfGuests() {
         return numberOfGuests;
     }
@@ -12,16 +17,11 @@ public class Room {
         this.numberOfGuests = numberOfGuests;
     }
 
-    public Person getPersonExtended() {
+    public Person getPerson() {
         return person;
     }
 
-    public void setPersonExtended(Person person) {
-        this.person = person;
-    }
-
-    public Room(int numberOfGuests, Person person) {
-        this.numberOfGuests = numberOfGuests;
+    public void setPerson(Person person) {
         this.person = person;
     }
 }

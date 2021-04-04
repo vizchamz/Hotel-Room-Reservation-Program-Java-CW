@@ -13,7 +13,7 @@ public class Hotel {
 
         initialise(hotel);
 
-        System.out.println("Arrays Version");
+        System.out.println("Classes Version");
 
         while (true) {
             extras();
@@ -132,7 +132,7 @@ public class Hotel {
         System.out.println("Empty Rooms");
 
         for (int x = 0; x < 8; x++) {
-            if (hotelRef[x].getPersonExtended().getFirstName().equals("e")) {
+            if (hotelRef[x].getPerson().getFirstName().equals("e")) {
                 System.out.println("room " + x + " is Empty");
             }
         }
@@ -144,7 +144,7 @@ public class Hotel {
         System.out.println("All Rooms");
 
         for (int x = 0; x < 8; x++) {
-            System.out.println("room " + x + " occupied by " + hotelRef[x].getPersonExtended().getFirstName() + " " + hotelRef[x].getPersonExtended().getSurName());
+            System.out.println("room " + x + " occupied by " + hotelRef[x].getPerson().getFirstName() + " " + hotelRef[x].getPerson().getSurName());
         }
 
         while (true) {
@@ -168,7 +168,7 @@ public class Hotel {
         System.out.println("All Info about Rooms");
 
         for (int x = 0; x < 8; x++) {
-            System.out.println("room " + x + " occupied by " + hotelRef[x].getPersonExtended().getFirstName() + " " + hotelRef[x].getPersonExtended().getSurName() + " & there's " + hotelRef[x].getNumberOfGuests() + " Guests in the Room. " + "Credit Card Number is " + hotelRef[x].getPersonExtended().getCardNo());
+            System.out.println("room " + x + " occupied by " + hotelRef[x].getPerson().getFirstName() + " " + hotelRef[x].getPerson().getSurName() + " & there's " + hotelRef[x].getNumberOfGuests() + " Guests in the Room. " + "Credit Card Number is " + hotelRef[x].getPerson().getCardNo());
         }
     }
 
@@ -179,7 +179,7 @@ public class Hotel {
         System.out.println("Sort Customers by Alphabetical Order");
 
         for (int i = 0; i < hotelRef.length; i++) {
-            guests[i] = hotelRef[i].getPersonExtended().getFirstName();
+            guests[i] = hotelRef[i].getPerson().getFirstName();
         }
 
         for(int i = 0; i< guests.length-1; i++) {
@@ -209,8 +209,11 @@ public class Hotel {
                     System.out.println("Enter First Name for room " + roomNumber + " to confirm the deletion:");
                     String roomCustomerFirstName = input.next();
 
-                    if (roomCustomerFirstName.equalsIgnoreCase(hotelRef[roomNumber].getPersonExtended().getFirstName())) {
-                        hotelRef[roomNumber].getPersonExtended().setFirstName("e");
+                    if (roomCustomerFirstName.equalsIgnoreCase(hotelRef[roomNumber].getPerson().getFirstName())) {
+                        hotelRef[roomNumber].getPerson().setFirstName("e");
+                        hotelRef[roomNumber].getPerson().setSurName("e");
+                        hotelRef[roomNumber].getPerson().setCardNo(0);
+                        hotelRef[roomNumber].setNumberOfGuests(0);
                         System.out.println("\n");
                         System.out.println("Deletion Customer from Room Number " + roomNumber + " Completed");
                     } else {
@@ -237,7 +240,7 @@ public class Hotel {
 
             if (!(roomCustomerName.equalsIgnoreCase("stop"))) {
                 for (index = 0; index < hotelRef.length; index++) {
-                    if (hotelRef[index].getPersonExtended().equals(roomCustomerName)) {
+                    if (hotelRef[index].getPerson().getFirstName().equalsIgnoreCase(roomCustomerName)) {
                         System.out.println(roomCustomerName + " has Occupied Room Number " + index);
                         break;
                     }
@@ -256,7 +259,7 @@ public class Hotel {
         try {
             FileWriter myWriter = new FileWriter("src/filename.txt");
             for (int x = 0; x < 8; x++) {
-                myWriter.write( x + "-" + hotelRef[x].getPersonExtended().getFirstName() + "-" + hotelRef[x].getPersonExtended().getSurName() + "-" + hotelRef[x].getNumberOfGuests() + "-" + hotelRef[x].getPersonExtended().getCardNo() + "\n");
+                myWriter.write( x + "-" + hotelRef[x].getPerson().getFirstName() + "-" + hotelRef[x].getPerson().getSurName() + "-" + hotelRef[x].getNumberOfGuests() + "-" + hotelRef[x].getPerson().getCardNo() + "\n");
             }
             myWriter.close();
             System.out.println("Successfully wrote to the file.");

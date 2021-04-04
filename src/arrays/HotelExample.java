@@ -48,7 +48,7 @@ public class HotelExample {
                     break;
 
                 case ("D"):
-                    deleteCustomers(hotel, customerLastName);
+                    deleteCustomers(hotel, customerLastName, customersPerRoom, cardNo);
                     break;
 
                 case ("F"):
@@ -201,7 +201,7 @@ public class HotelExample {
         }
     }
 
-    public static void deleteCustomers(String hotelRef[], String customerSurname[]) {
+    public static void deleteCustomers(String hotelRef[], String customerSurname[], int customersCount[], long customerCardNo[]) {
         while (true) {
             Scanner input = new Scanner(System.in);
             int roomNumber = 0;
@@ -216,6 +216,8 @@ public class HotelExample {
                     if (roomCustomerName.equalsIgnoreCase(hotelRef[roomNumber])) {
                         hotelRef[roomNumber] = "e";
                         customerSurname[roomNumber] = "e";
+                        customersCount[roomNumber] = 0;
+                        customerCardNo[roomNumber] = 0;
                         System.out.println("\n");
                         System.out.println("Deletion Customer from Room Number " + roomNumber + " Completed");
                     } else {
