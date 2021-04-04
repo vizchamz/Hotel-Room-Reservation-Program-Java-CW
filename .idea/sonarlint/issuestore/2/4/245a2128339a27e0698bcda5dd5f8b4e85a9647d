@@ -1,0 +1,39 @@
+
+T
+java:S1197á"8Move the array designator from the variable to the type.(Àé©Ğúÿÿÿÿ
+T
+java:S1197"8Move the array designator from the variable to the type.(Ÿ’â€üÿÿÿÿ
+H
+java:S1481"-Remove this unused "roomName" local variable.(Ú«ƒñşÿÿÿÿ
+P	java:S125i"<This block of commented-out lines of code should be removed.(ñ‰Ç_
+N
+java:S1197X"8Move the array designator from the variable to the type.(“ğš¿
+N
+java:S1197ú"8Move the array designator from the variable to the type.(õÇú/
+_
+java:S2095ü"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(Àáï
+O
+java:S1197ˆ"8Move the array designator from the variable to the type.(–ïî™
+T
+java:S1197–"8Move the array designator from the variable to the type.(¾öşÿÿÿÿ
+R	java:S125©"<This block of commented-out lines of code should be removed.(¹ä£Õ
+T
+java:S1197"8Move the array designator from the variable to the type.(–‚¹‹ùÿÿÿÿ
+W	java:S125š"<This block of commented-out lines of code should be removed.(†’†³ıÿÿÿÿ
+W	java:S125œ"<This block of commented-out lines of code should be removed.(›æ•´øÿÿÿÿ
+W	java:S125î"<This block of commented-out lines of code should be removed.(—³¹¡ÿÿÿÿÿ
+a	java:S128E"LEnd this switch case with an unconditional break, return or throw statement.(“Óåß
+W	java:S125"<This block of commented-out lines of code should be removed.(†¿Êîúÿÿÿÿ
+V	java:S125q"<This block of commented-out lines of code should be removed.(—³¹¡ÿÿÿÿÿ
+T
+java:S1197Œ"8Move the array designator from the variable to the type.(ù²§“úÿÿÿÿ
+O
+java:S1197•"8Move the array designator from the variable to the type.(¾È«¤
+R	java:S125»"<This block of commented-out lines of code should be removed.(¢ı—Æ
+T
+java:S1197À"8Move the array designator from the variable to the type.(¨å±ëıÿÿÿÿ
+R	java:S125¯"<This block of commented-out lines of code should be removed.(ÀÍƒ™
+G
+java:S1481	",Remove this unused "roomNum" local variable.(¡â¯ºùÿÿÿÿ
+t	java:S135Ä"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+s	java:S135\"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ

@@ -1,0 +1,80 @@
+
+a	java:S128F"LEnd this switch case with an unconditional break, return or throw statement.(ì”Âﬂ
+R	java:S125Á"<This block of commented-out lines of code should be removed.(¢˝ó∆
+N
+java:S1197¥"8Move the array designator from the variable to the type.(ÊÄ¯
+S
+java:S1197a"8Move the array designator from the variable to the type.(÷“ìÙ˛ˇˇˇˇ
+N
+java:S1197¥"8Move the array designator from the variable to the type.(ÊÄ¯
+T
+java:S1197∏"8Move the array designator from the variable to the type.(ò∞ˇÈ¯ˇˇˇˇ
+O
+java:S1197¶"8Move the array designator from the variable to the type.(Ì„∫‚
+O
+java:S1197¶"8Move the array designator from the variable to the type.(Ì„∫‚
+W	java:S125À"<This block of commented-out lines of code should be removed.(õÊï¥¯ˇˇˇˇ
+s	java:S135e"YReduce the total number of break and continue statements in this loop to use at most one.(òÔàûˇˇˇˇˇ
+T
+java:S1197∏"8Move the array designator from the variable to the type.(ò∞ˇÈ¯ˇˇˇˇ
+H
+java:S1481"-Remove this unused "roomName" local variable.(⁄´ÉÒ˛ˇˇˇˇ
+R	java:S125’"<This block of commented-out lines of code should be removed.(π‰£’
+T
+java:S1197î"8Move the array designator from the variable to the type.(üí‚Ä¸ˇˇˇˇ
+T
+java:S1197ü"8Move the array designator from the variable to the type.(≥€ˆù˘ˇˇˇˇ
+T
+java:S1197ü"8Move the array designator from the variable to the type.(≥€ˆù˘ˇˇˇˇ
+O
+java:S1197¶"8Move the array designator from the variable to the type.(Ì„∫‚
+S
+java:S1197a"8Move the array designator from the variable to the type.(÷“ìÙ˛ˇˇˇˇ
+W	java:S125ö"<This block of commented-out lines of code should be removed.(ó≥π°ˇˇˇˇˇ
+T
+java:S1197∏"8Move the array designator from the variable to the type.(ò∞ˇÈ¯ˇˇˇˇ
+T
+java:S1197ü"8Move the array designator from the variable to the type.(≥€ˆù˘ˇˇˇˇ
+S
+java:S1197a"8Move the array designator from the variable to the type.(÷“ìÙ˛ˇˇˇˇ
+N
+java:S1197¥"8Move the array designator from the variable to the type.(ÊÄ¯
+S
+java:S1197a"8Move the array designator from the variable to the type.(÷“ìÙ˛ˇˇˇˇ
+W	java:S125Ñ"<This block of commented-out lines of code should be removed.(ó≥π°ˇˇˇˇˇ
+_
+java:S2095®"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(û¿·Ô
+R	java:S125€"<This block of commented-out lines of code should be removed.(¿ÕÉô
+t	java:S135®"YReduce the total number of break and continue statements in this loop to use at most one.(òÔàûˇˇˇˇˇ
+T
+java:S1197ü"8Move the array designator from the variable to the type.(≥€ˆù˘ˇˇˇˇ
+T
+java:S1197∏"8Move the array designator from the variable to the type.(ò∞ˇÈ¯ˇˇˇˇ
+T
+java:S1197¬"8Move the array designator from the variable to the type.(æûÅˆ˛ˇˇˇˇ
+P	java:S125|"<This block of commented-out lines of code should be removed.(Òâ«_
+I
+java:S1481R"3Remove this unused "personExtended" local variable.(ã§äﬁ
+T
+java:S1197Ï"8Move the array designator from the variable to the type.(®Â±Î˝ˇˇˇˇ
+T
+java:S1197∫"8Move the array designator from the variable to the type.(ñÇπã˘ˇˇˇˇ
+G
+java:S1481	",Remove this unused "roomNum" local variable.(°‚Ø∫˘ˇˇˇˇ
+W	java:S125ª"<This block of commented-out lines of code should be removed.(Üø Ó˙ˇˇˇˇ
+N
+java:S1197Q"8Move the array designator from the variable to the type.(ïÃ◊⁄
+N
+java:S1197¥"8Move the array designator from the variable to the type.(ÊÄ¯
+N
+java:S1197Q"8Move the array designator from the variable to the type.(ïÃ◊⁄
+O
+java:S1197¡"8Move the array designator from the variable to the type.(æ»´§
+O
+java:S1197¶"8Move the array designator from the variable to the type.(Ì„∫‚
+]
+java:S1192ö"FDefine a constant instead of duplicating this literal "room " 3 times.(Ω∞éÃ
+t	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(òÔàûˇˇˇˇˇ
+T
+java:S1197ç"8Move the array designator from the variable to the type.(¿È©–˙ˇˇˇˇ
+W	java:S125…"<This block of commented-out lines of code should be removed.(ÜíÜ≥˝ˇˇˇˇ
