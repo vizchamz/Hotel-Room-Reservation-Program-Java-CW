@@ -1,81 +1,81 @@
 
+T
+java:S1197º"8Move the array designator from the variable to the type.(¶”›Ëúÿÿÿÿ
+T
+java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
+V
+java:S1197³"8Move the array designator from the variable to the type.(Ó“¶ü8Ûšàë‰/
+V
+java:S1197³"8Move the array designator from the variable to the type.(Ó“¶ü8Ûšàë‰/
+_
+java:S2095§"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(Àáï
 Z
 java:S1197m"8Move the array designator from the variable to the type.(Ï¦ùåûÿÿÿÿ8êÄœâ‰/
 T
 java:S1197”"8Move the array designator from the variable to the type.(ÁÍÖöùÿÿÿÿ
-T
-java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
-T
-java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
-U
-java:S1197\"8Move the array designator from the variable to the type.(¸Ïè™8û¹¾ë‰/
-Z
-java:S1197m"8Move the array designator from the variable to the type.(Ï¦ùåûÿÿÿÿ8êÄœâ‰/
+S
+java:S1197U"8Move the array designator from the variable to the type.(§ëıòıÿÿÿÿ
 T
 java:S1197º"8Move the array designator from the variable to the type.(¶”›Ëúÿÿÿÿ
-O
-java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß
-Z
-java:S1197m"8Move the array designator from the variable to the type.(Ï¦ùåûÿÿÿÿ8êÄœâ‰/
-T
-java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
-T
-java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
-T
-java:S1197º"8Move the array designator from the variable to the type.(¶”›Ëúÿÿÿÿ
-_
-java:S2095§"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(Àáï
-T
-java:S1197Å"8Move the array designator from the variable to the type.(¾öşÿÿÿÿ
-U
-java:S1197\"8Move the array designator from the variable to the type.(¸Ïè™8û¹¾ë‰/
 G
 java:S1481	",Remove this unused "roomNum" local variable.(¡â¯ºùÿÿÿÿ
-V
-java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß8Şúä‰/
-t
-java:S1192œ"QDefine a constant instead of duplicating this literal "src/filename.txt" 3 times.(Ğ‘®Ãúÿÿÿÿ8 Åñç‰/
-T
-java:S1197º"8Move the array designator from the variable to the type.(¶”›Ëúÿÿÿÿ
-T
-java:S1197º"8Move the array designator from the variable to the type.(¶”›Ëúÿÿÿÿ
-V
-java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß8ÿ©æ‰/
+]
+java:S1192š"FDefine a constant instead of duplicating this literal "room " 3 times.(½°Ì
 V
 java:S1197³"8Move the array designator from the variable to the type.(Ó“¶ü8Ûšàë‰/
-T
-java:S1197"8Move the array designator from the variable to the type.(¾İÊùÿÿÿÿ
-V
-java:S1197³"8Move the array designator from the variable to the type.(Ó“¶ü8Ûšàë‰/
-V
-java:S1197³"8Move the array designator from the variable to the type.(Ó“¶ü8Ûšàë‰/
-[
-java:S1197¹"8Move the array designator from the variable to the type.(–‚¹‹ùÿÿÿÿ8Ûšàë‰/
 T
 java:S1197š"8Move the array designator from the variable to the type.(©ûºşúÿÿÿÿ
-t	java:S135©"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
-a	java:S128J"LEnd this switch case with an unconditional break, return or throw statement.(“Óåß
 S
 java:S1197U"8Move the array designator from the variable to the type.(§ëıòıÿÿÿÿ
 V
 java:S1197³"8Move the array designator from the variable to the type.(Ó“¶ü8Ûšàë‰/
+t	java:S135©"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+[
+java:S1197¹"8Move the array designator from the variable to the type.(–‚¹‹ùÿÿÿÿ8Ûšàë‰/
+V
+java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß8Şúä‰/
+H
+java:S1481"-Remove this unused "roomName" local variable.(Ú«ƒñşÿÿÿÿ
+U
+java:S1197\"8Move the array designator from the variable to the type.(¸Ïè™8û¹¾ë‰/
+V
+java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß8ÿ©æ‰/
+O
+java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß
 T
 java:S1197š"8Move the array designator from the variable to the type.(©ûºşúÿÿÿÿ
+Z
+java:S1197m"8Move the array designator from the variable to the type.(Ï¦ùåûÿÿÿÿ8êÄœâ‰/
+U
+java:S1197\"8Move the array designator from the variable to the type.(¸Ïè™8û¹¾ë‰/
+T
+java:S1197š"8Move the array designator from the variable to the type.(©ûºşúÿÿÿÿ
+V
+java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß8ÿ©æ‰/
+a	java:S128J"LEnd this switch case with an unconditional break, return or throw statement.(“Óåß
+T
+java:S1197Å"8Move the array designator from the variable to the type.(¾öşÿÿÿÿ
+T
+java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
 T
 java:S1197Ä"8Move the array designator from the variable to the type.(ËÛÄÇıÿÿÿÿ
+T
+java:S1197º"8Move the array designator from the variable to the type.(¶”›Ëúÿÿÿÿ
+p
+java:S3012Ë"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(´ıÒ’
 Z
 java:S1197m"8Move the array designator from the variable to the type.(Ï¦ùåûÿÿÿÿ8êÄœâ‰/
 T
-java:S1197š"8Move the array designator from the variable to the type.(©ûºşúÿÿÿÿ
+java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
+T
+java:S1197º"8Move the array designator from the variable to the type.(¶”›Ëúÿÿÿÿ
 T
 java:S1197š"8Move the array designator from the variable to the type.(©ûºşúÿÿÿÿ
-S
-java:S1197U"8Move the array designator from the variable to the type.(§ëıòıÿÿÿÿ
-]
-java:S1192š"FDefine a constant instead of duplicating this literal "room " 3 times.(½°Ì
-p
-java:S3012Ë"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(´ıÒ’
-H
-java:S1481"-Remove this unused "roomName" local variable.(Ú«ƒñşÿÿÿÿ
-V
-java:S1197Ş"8Move the array designator from the variable to the type.(´¤Æß8ÿ©æ‰/
+t
+java:S1192œ"QDefine a constant instead of duplicating this literal "src/filename.txt" 3 times.(Ğ‘®Ãúÿÿÿÿ8 Åñç‰/
+Z
+java:S1197m"8Move the array designator from the variable to the type.(Ï¦ùåûÿÿÿÿ8êÄœâ‰/
+T
+java:S1197"8Move the array designator from the variable to the type.(¾İÊùÿÿÿÿ
+T
+java:S1197 "8Move the array designator from the variable to the type.(ıŠ¶¶üÿÿÿÿ
